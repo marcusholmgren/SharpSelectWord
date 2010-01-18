@@ -1,0 +1,24 @@
+<AddIn name        = "SharpSelectWord"
+       author      = "Marcus Holmgren"
+       url         = "http://hem.bredband.net/dotnet/selectword/"
+       description = "Select word or extend selection block in the text editor">
+	
+	<Runtime>
+		<Import assembly = "SharpSelectWord.dll" />
+	</Runtime>
+	
+	<Path name = "/Workspace/Tools">
+		<MenuItem id = "SelectWordCommand"
+		          label = "Select Word"
+		          shortcut = "Control|W"
+		          class = "MarcusHolmgren.SharpDevelop.SelectWord.SelectWordCommand" />
+		<MenuItem id = "DeselectWordCommand"
+				  shortcut = "Control|Shift|W"
+				  class = "MarcusHolmgren.SharpDevelop.SelectWord.DeselectWordCommand" />
+	</Path>
+	
+	<Manifest>
+		<Identity name="SharpDevelop.SelectWord" version="@SharpSelectWord.dll" />
+		<Dependency addin="SharpDevelop" version="3.0" />
+	</Manifest>
+</AddIn>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSelectWord", "SharpSelectWord\SharpSelectWord.csproj", "{0678CB31-2B8A-4BAF-9AE1-7A56414BFB5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSelectWordTest", "SharpSelectWordTest\SharpSelectWordTest.csproj", "{261A4664-2342-4E38-8888-F41332051094}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0678CB31-2B8A-4BAF-9AE1-7A56414BFB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0678CB31-2B8A-4BAF-9AE1-7A56414BFB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0678CB31-2B8A-4BAF-9AE1-7A56414BFB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0678CB31-2B8A-4BAF-9AE1-7A56414BFB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261A4664-2342-4E38-8888-F41332051094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261A4664-2342-4E38-8888-F41332051094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261A4664-2342-4E38-8888-F41332051094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261A4664-2342-4E38-8888-F41332051094}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
