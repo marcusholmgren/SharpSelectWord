@@ -68,6 +68,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="Configuration\AssemblyInfo.cs" />
+    <Compile Include="Src\DecreaseSelection.cs" />
     <Compile Include="Src\DeselectWordCommand.cs" />
     <Compile Include="Src\ExtendBlockSelection.cs" />
     <Compile Include="Src\SelectWordCommand.cs" />

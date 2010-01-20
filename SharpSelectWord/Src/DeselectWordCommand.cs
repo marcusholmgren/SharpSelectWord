@@ -24,38 +24,35 @@ using ICSharpCode.TextEditor.Document;
 
 namespace MarcusHolmgren.SharpDevelop.SelectWord
 {
-    public class DeselectWordCommand : AbstractMenuCommand
-    {
-        public override void Run()
-        {
-            ITextEditorControlProvider tecp = WorkbenchSingleton.Workbench.ActiveContent as ITextEditorControlProvider;
-            if (tecp == null) return;
-            
-            TextArea textArea = tecp.TextEditorControl.ActiveTextAreaControl.TextArea;
+	public class DeselectWordCommand : AbstractMenuCommand
+	{
+		public override void Run()
+		{
+			ITextEditorControlProvider tecp = WorkbenchSingleton.Workbench.ActiveContent as ITextEditorControlProvider;
+			if (tecp == null) return;
+			
+			TextArea textArea = tecp.TextEditorControl.ActiveTextAreaControl.TextArea;
 
-            ISelection selector = MakeWordSelector(textArea);
-            textArea.SelectionManager.SetSelection(selector);
+			ISelection selector = MakeWordSelector(textArea);
+			if (selector != null)
+			{
+				textArea.SelectionManager.SetSelection(selector);
+				textArea.Refresh();
+			}
+		}
 
-            textArea.Refresh();
-        }
+		private static ISelection MakeWordSelector(TextArea textArea)
+		{
+			IDocument document = textArea.Document;
 
-        private static ISelection MakeWordSelector(TextArea textArea)
-        {
-            IDocument document = textArea.Document;
-
-            if (!textArea.SelectionManager.HasSomethingSelected)
-            {
-                int currentOffset = textArea.Caret.Offset;
-                return new SingleWordSelection(document, currentOffset);
-            }
-            else
-            {
-                SelectionManager selectionManager = textArea.SelectionManager;
+			if (textArea.SelectionManager.HasSomethingSelected)
+			{
+				SelectionManager selectionManager = textArea.SelectionManager;
                 ISelection firstSelection = selectionManager.SelectionCollection[0];
-
-                return new ExtendBlockSelection(document, firstSelection);
-            }
-        }
-    }
+				return new DecreaseSelection(document, firstSelection);
+			}
+			return null;
+		}
+	}
 }
 

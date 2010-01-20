@@ -65,6 +65,7 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Src\DecreaseSelectionTest.cs" />
     <Compile Include="Src\ExtendBlockSelectionTest.cs" />
     <Compile Include="Src\SingleWordSelectionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

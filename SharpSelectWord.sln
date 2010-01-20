@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
+# SharpDevelop 3.2.0.5374
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSelectWord", "SharpSelectWord\SharpSelectWord.csproj", "{0678CB31-2B8A-4BAF-9AE1-7A56414BFB5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSelectWordTest", "SharpSelectWordTest\SharpSelectWordTest.csproj", "{261A4664-2342-4E38-8888-F41332051094}"
